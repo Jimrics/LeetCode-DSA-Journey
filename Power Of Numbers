@@ -1,0 +1,16 @@
+class Solution {
+    public int reverseExponentiation(int n) {
+        // code here
+        int base =n;
+        int reversed=0; 
+        int lastdigit=0;
+        while(n!=0 && n>9){
+            lastdigit=n%10;
+            reversed = reversed*10+lastdigit;
+            n=n/10;
+        }
+         int result= (int)Math.pow(base, n);
+    
+        return result;
+    }
+}
