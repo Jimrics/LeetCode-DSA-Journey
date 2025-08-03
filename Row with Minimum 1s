@@ -1,0 +1,24 @@
+class Solution {
+    int minRow(int mat[][]) {
+        // code here
+        int min_count = Integer.MAX_VALUE;
+       
+        int min_row_index=-1;
+        for (int i=0; i<mat.length; i++){
+        int count =0;
+            for(int j=0; j<mat[i].length;j++){
+                int val = mat[i][j];
+                if(val == 1)
+                count++;
+               
+            }
+         if(count < min_count){
+                    min_count = count;
+                    min_row_index=i;
+                }
+            
+        }
+    
+        return min_row_index +1;
+    }
+};
